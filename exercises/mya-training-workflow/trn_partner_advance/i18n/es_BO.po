@@ -616,3 +616,18 @@ msgstr "Primera prueba"
 #: model:res.partner.category,name:trn_partner_advance.pad_category_user
 msgid "User"
 msgstr "Usuario"
+
+#. module: trn_partner_advance
+#: model:ir.model.fields,field_description:trn_partner_advance.field_res_partner__partner_code
+msgid "Código Cliente"
+msgstr "Código Cliente"
+
+#. module: trn_partner_advance
+#: model:ir.model.fields,field_description:trn_partner_advance.field_res_partner__parent_id
+msgid "Cliente Padre"
+msgstr "Cliente Padre"
+
+#. module: trn_partner_advance
+#: model:ir.model.fields,field_description:trn_partner_advance.field_res_partner__is_cliente_padre
+msgid "¿Es Cliente Padre?"
+msgstr "¿Es Cliente Padre?"

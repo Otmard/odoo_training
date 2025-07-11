@@ -45,6 +45,17 @@
                     <field name="full_vat"/>
                 </xpath>
             </field>
+                <field name="name">res.partner.form.inherit.codigo</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='name']" position="after">
+            <field name="is_cliente_padre"/>
+            <field name="cliente_padre_id"/>
+            <field name="codigo_cliente" readonly="1"/>
+        </xpath>
+    </field>
+
         </record>
 
         <record id="view_res_partner_inherit_tree_inherit_tree" model="ir.ui.view">
@@ -68,6 +79,15 @@
                     <field name="full_vat"/>
                 </xpath>
             </field>
+            <field name="name">res.partner.tree.inherit.codigo</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="codigo_cliente"/>
+                    <field name="cliente_padre_id"/>
+                </xpath>
+            </field>
         </record>
 
         <record id="view_res_partner_inherit_search" model="ir.ui.view">
@@ -86,5 +106,6 @@
                 </xpath>
            </field>
         </record>
+
     </data>
 </odoo>

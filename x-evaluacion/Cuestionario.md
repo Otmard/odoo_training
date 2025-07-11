@@ -9,7 +9,12 @@
    - b) Puedo heredar campos de un modelo persistente para construir una clase abstracta.
    - c) No puedo realizar ninguna de las anteriores
 
-    Resp.-
+    Resp.-a) Puedo heredar campos de una clase abstracta para construir un modelo persistente.
+
+    ¿Por qué?
+    Porque en Odoo, las clases abstractas son como "plantillas" de código: no crean una tabla en la base de datos, pero sí pueden tener campos y funciones que luego puedes usar en modelos reales (persistentes).
+
+    Esto se hace mucho cuando tienes varios modelos que comparten campos similares y no quieres repetir todo el código. Entonces creas una clase abstracta con esos campos y la heredas desde tus modelos persistentes.
 
 2. Cree los campos necesarios para realizar el requerimiento de un cliente X
     - El cliente requiere que los clientes en el formulario de contactos se puedan agrupar por un contacto padre (cliente padre)
